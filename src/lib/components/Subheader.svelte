@@ -22,7 +22,6 @@
             max-width: 500px;
             margin-block: 20px;
             margin-inline: auto;
-            background-color: aliceblue;
             border-radius: 6px;
             padding: 8px 12px;
         }

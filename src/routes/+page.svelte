@@ -5,6 +5,7 @@
 	import Subheader from '../lib/components/Subheader.svelte';
 	import ThemeToggle from '../lib/components/ThemeToggle.svelte';
 	import ZoomToggle from '../lib/components/ZoomToggle.svelte';
+	import Info from '../lib/Info.svelte';
 
     const mapOptions = {
         center: [51.509865, -0.118092],
@@ -42,6 +43,7 @@
 <Header padding="8px 12px">
     <ThemeToggle slot="left" className=""></ThemeToggle>
     <h2 slot="center"><a href="https://foreverpollution.eu/">The Forever Pollution Project</a></h2>
+    <Info slot="right"></Info>
 </Header>
 <Subheader></Subheader>
 <main>

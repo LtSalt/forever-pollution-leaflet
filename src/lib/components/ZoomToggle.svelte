@@ -24,7 +24,7 @@
 
 <div id="controls">
     <div id="zoom-toggle-wrapper">
-        <h2>Zoom in</h2>
+        <h3>Zoom in</h3>
         <label for="toggle-zoom">
             <input type="checkbox" id="toggle-zoom" bind:checked={zoom}>
         </label>
@@ -39,15 +39,17 @@
             z-index: 1000;
 
             #zoom-toggle-wrapper {
-                width: 108px;
+                width: 116px;
+                padding: 4px 8px;
                 display: flex;
                 justify-content: space-between;
-                padding: 4px 6px;
+                gap: 4px;
                 border-radius: 100vw;
                 align-items: center;
                 background-color: var(--bg-primary);
 
             }
+
 
             label:has(#toggle-zoom) {
                 display: block;

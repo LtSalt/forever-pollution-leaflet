@@ -24,13 +24,21 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s;
 }
 
 body {
   font-family: var(--ff-sans);
-  line-height: 1.4;
   color: var(--clr-primary);
   background-color: var(--bg-primary);
+  line-height: 1.4;
+}
+
+button {
+  background-color: inherit;
+  color: inherit;
+  border: none;
+  cursor: pointer;
 }
 
 h1 {
@@ -63,10 +71,6 @@ a:visited {
 .hover:hover {
   color: var(--bg-surface);
   fill: var(--bg-surface);
-}
-
-svg:hover {
-  stroke: var(--clr-accent);
 }
 
 /*# sourceMappingURL=styles.css.map */

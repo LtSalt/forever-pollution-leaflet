@@ -28,17 +28,14 @@
         }
 
         .left {
-            // flex: 1;
             justify-content: left;
         }
 
         .center {
             justify-content: center;
-            // flex: 999;
         }
 
         .right {
-            // flex: 1;
             justify-content: flex-end;
         }
 

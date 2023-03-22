@@ -1,11 +1,18 @@
 <script>
     import { SunIcon, MoonIcon } from "svelte-feather-icons";
+    import { onMount } from "svelte";
 
     export let size;
     export let className;
 
-    let theme = "light";
+    let theme;
 
+    onMount(() => {
+        const storedTheme = localStorage.getItem("theme")
+        theme = storedTheme === "dark" ? "dark" : "light";
+    })
+
+    $: if (theme) localStorage.setItem("theme", theme)
 </script>
 
 <div id="theme-toggle">
@@ -22,7 +29,6 @@
 <style lang="scss">
     #theme-toggle {
         label {
-            // background-color: ;;
             border-radius: 100vw;
             display: flex;
             cursor: pointer;
@@ -32,10 +38,12 @@
             }
         }
 
-        :global(svg:hover) {
-            // stroke: var(--bg-active);
-            // stroke: orange;
-            // fill: var(--bg-active)
+        :global(svg) {
+            stroke: var(--clr-weak);
+
+            &:hover {
+                stroke: var(--clr-accent)
+            }
         }
 
         input {
