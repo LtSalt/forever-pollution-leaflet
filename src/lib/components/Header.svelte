@@ -23,8 +23,8 @@
         align-items: center;
 
         > * {
-            display: flex;
             flex: 1;
+            display: flex;
         }
 
         .left {

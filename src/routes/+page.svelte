@@ -1,24 +1,31 @@
 <script>
-    import { LeafletMap, TileLayer, Circle, Popup, Tooltip } from 'svelte-leafletjs';
+    import { LeafletMap, TileLayer, Circle } from 'svelte-leafletjs';
 	import Footer from '../lib/components/Footer.svelte';
 	import Header from '../lib/components/Header.svelte';
 	import Subheader from '../lib/components/Subheader.svelte';
 	import ThemeToggle from '../lib/components/ThemeToggle.svelte';
 	import ZoomToggle from '../lib/components/ZoomToggle.svelte';
 	import Info from '../lib/Info.svelte';
+    import { theme } from "$lib/stores/theme";
 
     const mapOptions = {
         center: [51.509865, -0.118092],
         zoom: 4
     }
+    let tileUrl;
 
     // const tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
-    const tileUrl = "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}'";
+
+    $: if ($theme === "dark") {
+        tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
+    } else {
+        tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png'
+    }
 
     const tileLayerOptions = {
         minZoom: 0,
         maxZoom: 12,
-        attribution: "Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ"
+        attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
     }
 
     let leafletMap;
@@ -47,7 +54,6 @@
 </Header>
 <Subheader></Subheader>
 <main>
-    <!-- <h1>The Map of Forever Pollution in Europe</h1> -->
     <LeafletMap bind:this={leafletMap} options={mapOptions}>
         <ZoomToggle></ZoomToggle>
         <TileLayer url={tileUrl} options={tileLayerOptions}/>

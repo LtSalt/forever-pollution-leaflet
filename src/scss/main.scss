@@ -39,6 +39,14 @@ button {
     cursor: pointer;
 }
 
+a {
+    color: inherit;
+
+    &:hover {
+        color: var(--clr-accent);
+    }
+}
+
 h1 {
     margin-block: 24px 16px; 
 }
@@ -49,13 +57,12 @@ h2 {
     text-transform: uppercase;
 }
 
-p {
-    margin-bottom: 12px;
+h6 {
+    color: var(--clr-weak)
 }
 
-a,
-a:visited {
-    color: inherit;
+p {
+    margin-bottom: 12px;
 }
 
 .surface {
@@ -68,8 +75,8 @@ a:visited {
 }
 
 
-.hover:hover {
-    color: var(--bg-surface);
-    fill: var(--bg-surface);
-}
+// .hover:hover {
+//     color: var(--bg-surface);
+//     fill: var(--bg-surface);
+// }
 
