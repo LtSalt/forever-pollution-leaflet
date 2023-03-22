@@ -1,12 +1,32 @@
 <script>
-    import { zoom } from "$lib/stores/zoom.js";
+    import L from "leaflet";
+    import { getContext } from "svelte";
+
+    const { getMap } = getContext(L)
+    let zoom = false;
+
+    $: if (!zoom) {
+        getMap().zoomControl.disable();
+        getMap().scrollWheelZoom.disable();
+        getMap().touchZoom.disable();
+        getMap().doubleClickZoom.disable();
+        getMap().boxZoom.disable();
+        getMap().keyboard.disable();
+    } else if (zoom) {
+        getMap().zoomControl.enable();
+        getMap().scrollWheelZoom.enable();
+        getMap().touchZoom.enable();
+        getMap().doubleClickZoom.enable();
+        getMap().boxZoom.enable();
+        getMap().keyboard.enable();
+    }
 </script>
 
 <div id="controls">
     <div id="zoom-toggle-wrapper">
         <h2>Zoom in</h2>
         <label for="toggle-zoom">
-            <input type="checkbox" id="toggle-zoom" bind:checked={$zoom}>
+            <input type="checkbox" id="toggle-zoom" bind:checked={zoom}>
         </label>
     </div>
 </div>

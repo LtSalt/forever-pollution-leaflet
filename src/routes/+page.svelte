@@ -26,9 +26,9 @@
 
 <Header></Header>
 <main>
-    <ZoomToggle></ZoomToggle>
     <LeafletMap bind:this={leafletMap} options={mapOptions}>
         <TileLayer url={tileUrl} options={tileLayerOptions}/>
+        <ZoomToggle></ZoomToggle>
         {#each measurements as {lat, lon}}
             <Circle latLng={[lat, lon]} radius={10} color="black" fillColor="black"></Circle>
         {/each}
@@ -47,9 +47,5 @@
         min-height: 100svh;
         display: grid;
         grid-template-rows: max-content 1fr max-content;
-    }
-
-    main {
-        position: relative
     }
 </style>
