@@ -1,8 +1,21 @@
 :root {
   --ff-sans: "Montserrat", sans-serif;
-  --color-primary: #4d4d4d;
-  --color-surface: black;
-  --bg-surface: #e6e6e6;
+}
+:root:has(#theme-light:checked) {
+  --clr-primary: #262626;
+  --clr-weak: #595959;
+  --clr-accent: orange;
+  --bg-primary: white;
+  --bg-surface: rgb(220, 220, 220);
+  --bg-active: darkgray;
+}
+:root:has(#theme-dark:checked) {
+  --clr-primary: #e6e6e6;
+  --clr-weak: #999999;
+  --clr-accent: orange;
+  --bg-primary: #4d4d4d;
+  --bg-surface: gray;
+  --bg-active: #b3b3b3;
 }
 
 *,
@@ -16,7 +29,8 @@
 body {
   font-family: var(--ff-sans);
   line-height: 1.4;
-  color: var(--color-primary);
+  color: var(--clr-primary);
+  background-color: var(--bg-primary);
 }
 
 h1 {
@@ -25,7 +39,8 @@ h1 {
 
 h2 {
   font-size: 0.7rem;
-  font-weight: bold;
+  color: var(--clr-weak);
+  text-transform: uppercase;
 }
 
 p {
@@ -37,9 +52,21 @@ a:visited {
   color: inherit;
 }
 
+.surface {
+  background-color: var(--bg-surface);
+}
+.surface > svg {
+  stroke: var(--bg-surface);
+  fill: var(--bg-surface);
+}
+
 .hover:hover {
-  color: orange;
-  fill: orange;
+  color: var(--bg-surface);
+  fill: var(--bg-surface);
+}
+
+svg:hover {
+  stroke: var(--clr-accent);
 }
 
 /*# sourceMappingURL=styles.css.map */

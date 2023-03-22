@@ -1,0 +1,21 @@
+// light theme
+
+$theme-light: (
+    clr-primary: lighten(black, 15%),
+    clr-weak: lighten(black, 35%),
+    clr-accent: orange,
+    bg-primary: white,
+    bg-surface: rgb(220, 220, 220),
+    bg-active: darken(rgb(220, 220, 220), 20%)
+);
+
+$theme-dark: (
+    clr-primary: darken(white, 10%),
+    clr-weak: darken(white, 40%),
+    clr-accent: orange,
+    bg-primary: lighten(black, 30%),
+    bg-surface: lighten(black, 50%),
+    bg-active: lighten(black, 70%)
+)
+
+

@@ -40,7 +40,7 @@
 </script>
 
 <Header padding="8px 12px">
-    <ThemeToggle slot="left" className="hover"></ThemeToggle>
+    <ThemeToggle slot="left" className=""></ThemeToggle>
     <h2 slot="center"><a href="https://foreverpollution.eu/">The Forever Pollution Project</a></h2>
 </Header>
 <Subheader></Subheader>
@@ -76,6 +76,7 @@
         display: grid;
         grid-template-rows: max-content max-content 1fr max-content;
     }
+
 
     /* .tooltip {
         height: 100%;

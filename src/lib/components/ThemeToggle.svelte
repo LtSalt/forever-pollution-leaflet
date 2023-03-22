@@ -22,7 +22,7 @@
 <style lang="scss">
     #theme-toggle {
         label {
-            background-color: white;;
+            // background-color: ;;
             border-radius: 100vw;
             display: flex;
             cursor: pointer;
@@ -33,7 +33,9 @@
         }
 
         :global(svg:hover) {
-            fill: inherit;
+            // stroke: var(--bg-active);
+            // stroke: orange;
+            // fill: var(--bg-active)
         }
 
         input {

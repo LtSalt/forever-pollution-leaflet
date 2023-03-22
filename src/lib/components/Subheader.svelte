@@ -15,7 +15,7 @@
             width: 720px;
             margin-block: 0 32px;
             margin-inline: auto;
-            border-top: 2px solid var(--color-primary);
+            border-top: 2px solid var(--clr-primary);
         }
         
         #instructions {

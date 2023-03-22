@@ -45,7 +45,7 @@
                 padding: 4px 6px;
                 border-radius: 100vw;
                 align-items: center;
-                background-color: white;
+                background-color: var(--bg-primary);
 
             }
 
@@ -61,7 +61,7 @@
                     position: absolute;
                     width: 100%; 
                     height: 100%;
-                    background-color: rgb(220, 220, 220);
+                    background-color: var(--bg-surface);
                     border-radius: 100vw;
                 }
 
@@ -69,7 +69,7 @@
                     content: "";
                     width: 16px;
                     height: 16px;
-                    background-color: white;
+                    background-color: var(--bg-primary);
                     position: absolute;
                     top: 50%;
                     left: 2px;
@@ -82,7 +82,7 @@
             label:has(#toggle-zoom:checked) {
 
                 &::before {
-                    background-color: var(--color-primary);
+                    background-color: var(--bg-active);
                 }
                 &::after {
                     transform: translate(20px, -8px);
