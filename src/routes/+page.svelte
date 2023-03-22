@@ -2,6 +2,7 @@
     import { LeafletMap, TileLayer, Circle, Popup, Tooltip } from 'svelte-leafletjs';
 	import Footer from '../lib/components/Footer.svelte';
 	import Header from '../lib/components/Header.svelte';
+	import ZoomToggle from '../lib/components/ZoomToggle.svelte';
 
     const mapOptions = {
         center: [51.509865, -0.118092],
@@ -25,6 +26,7 @@
 
 <Header></Header>
 <main>
+    <ZoomToggle></ZoomToggle>
     <LeafletMap bind:this={leafletMap} options={mapOptions}>
         <TileLayer url={tileUrl} options={tileLayerOptions}/>
         {#each measurements as {lat, lon}}
@@ -45,5 +47,9 @@
         min-height: 100svh;
         display: grid;
         grid-template-rows: max-content 1fr max-content;
+    }
+
+    main {
+        position: relative
     }
 </style>
