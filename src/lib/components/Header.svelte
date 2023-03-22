@@ -1,30 +1,45 @@
-<header>
-    <h1>The Map of Forever Pollution in Europe</h1>
-    <hr>
-    <p id="description">This map shows known and presumptive contamination sites across Europe.</p>
-    <p id="instructions">
-        Zoom in on the map and hover over a circle to display more information.
-    </p>
+<script>
+    export let padding = "0";
+    export let className;
+</script>
+
+
+<header id="main-header" class={className} style="padding: {padding}">
+    <div class="left">
+        <slot name="left"></slot>
+    </div>
+    <div class="center">
+        <slot name="center"></slot>
+    </div>
+    <div class="right">
+        <slot name="right"></slot>
+    </div>
 </header>
 
+
 <style lang="scss">
-     header {
-        text-align: center;
-        
-        hr {
-            width: 720px;
-            margin-block: 0 32px;
-            margin-inline: auto;
-            border-top: 2px solid var(--color-primary);
+    header {
+        display: flex;
+        align-items: center;
+
+        > * {
+            display: flex;
         }
-        
-        #instructions {
-            max-width: 500px;
-            margin-block: 20px;
-            margin-inline: auto;
-            background-color: aliceblue;
-            border-radius: 6px;
-            padding: 8px 12px;
+
+        .left {
+            flex: 1;
+            justify-content: left;
         }
+
+        .center {
+            justify-content: center;
+            flex: 999;
+        }
+
+        .right {
+            flex: 1;
+            justify-content: flex-end;
+        }
+
     }
 </style>

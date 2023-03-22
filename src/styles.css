@@ -37,4 +37,9 @@ a:visited {
   color: inherit;
 }
 
+.hover:hover {
+  color: orange;
+  fill: orange;
+}
+
 /*# sourceMappingURL=styles.css.map */
