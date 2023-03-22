@@ -23,5 +23,8 @@
 		"svelte-leafletjs": "^0.10.0",
 		"vite": "^4.2.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@fontsource/montserrat": "^4.5.14"
+	}
 }

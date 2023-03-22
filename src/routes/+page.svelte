@@ -1,5 +1,7 @@
 <script>
-    import {LeafletMap, TileLayer, Circle, Popup, Tooltip} from 'svelte-leafletjs';
+    import { LeafletMap, TileLayer, Circle, Popup, Tooltip } from 'svelte-leafletjs';
+	import Footer from '../lib/components/Footer.svelte';
+	import Header from '../lib/components/Header.svelte';
 
     const mapOptions = {
         center: [51.509865, -0.118092],
@@ -21,17 +23,23 @@
 
 </script>
 
-<header></header>
+<Header></Header>
+<main>
     <LeafletMap bind:this={leafletMap} options={mapOptions}>
         <TileLayer url={tileUrl} options={tileLayerOptions}/>
         {#each measurements as {lat, lon}}
             <Circle latLng={[lat, lon]} radius={10} color="black" fillColor="black"></Circle>
         {/each}
     </LeafletMap>
-<footer></footer>
+</main>
+<Footer></Footer>
 
 <style>
     @import 'leaflet/dist/leaflet.css';
+    @import "@fontsource/montserrat/400.css";
+    @import "@fontsource/montserrat/500.css";
+    @import "@fontsource/montserrat/700.css";
+    @import "../styles.css";
 
     :global(body) {
         min-height: 100svh;

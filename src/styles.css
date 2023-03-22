@@ -1,0 +1,40 @@
+:root {
+  --ff-sans: "Montserrat", sans-serif;
+  --color-primary: #4d4d4d;
+  --color-surface: black;
+  --bg-surface: #e6e6e6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ff-sans);
+  line-height: 1.4;
+  color: var(--color-primary);
+}
+
+h1 {
+  margin-block: 24px 16px;
+}
+
+h2 {
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 12px;
+}
+
+a,
+a:visited {
+  color: inherit;
+}
+
+/*# sourceMappingURL=styles.css.map */
