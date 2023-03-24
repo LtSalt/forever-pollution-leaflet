@@ -74,9 +74,19 @@ p {
     }
 }
 
+.leaflet-control {
+    background-color: var(--bg-surface) !important;
+    color: var(--clr-primary);
+    > * {
+        background-color: var(--bg-surface) !important;
+        color: var(--clr-primary) !important;
+    }
 
-// .hover:hover {
-//     color: var(--bg-surface);
-//     fill: var(--bg-surface);
-// }
+    > .leaflet-disabled {
+        color: var(--clr-disabled) !important;
+    }
+    > a:hover {
+            color: var(--clr-accent) !important;
+        }
+}
 

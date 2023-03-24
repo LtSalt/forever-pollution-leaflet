@@ -7,6 +7,7 @@
   - [x] create alternativ color scheme in styles
   - [x] set and get from local storage
   - [x] change map tile to dark mode if dark mode in local storage
-  - [ ] change leaflet surface elements in dark mode
+  - [x] change leaflet surface elements in dark mode
 - [ ] create viz color schemes
 - [ ] Info Dialogue
+- [ ] rework surface colors

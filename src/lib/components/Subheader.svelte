@@ -22,7 +22,6 @@
             max-width: 500px;
             margin-block: 20px;
             margin-inline: auto;
-            border-radius: 6px;
             padding: 8px 12px;
         }
     }

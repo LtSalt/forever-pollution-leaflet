@@ -4,14 +4,16 @@
 :root:has(#theme-light:checked) {
   --clr-primary: #262626;
   --clr-weak: #595959;
+  --clr-disabled: gray;
   --clr-accent: orange;
   --bg-primary: white;
-  --bg-surface: rgb(220, 220, 220);
+  --bg-surface: #F4F4F4;
   --bg-active: darkgray;
 }
 :root:has(#theme-dark:checked) {
   --clr-primary: #e6e6e6;
   --clr-weak: #cccccc;
+  --clr-disabled: #999999;
   --clr-accent: orange;
   --bg-primary: #4d4d4d;
   --bg-surface: gray;
@@ -72,6 +74,21 @@ p {
 .surface > svg {
   stroke: var(--bg-surface);
   fill: var(--bg-surface);
+}
+
+.leaflet-control {
+  background-color: var(--bg-surface) !important;
+  color: var(--clr-primary);
+}
+.leaflet-control > * {
+  background-color: var(--bg-surface) !important;
+  color: var(--clr-primary) !important;
+}
+.leaflet-control > .leaflet-disabled {
+  color: var(--clr-disabled) !important;
+}
+.leaflet-control > a:hover {
+  color: var(--clr-accent) !important;
 }
 
 /*# sourceMappingURL=styles.css.map */
